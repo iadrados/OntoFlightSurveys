@@ -1,0 +1,1168 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#"
+     xml:base="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction"
+     xmlns:dct="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#dct:"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:FligthsSatisfaction="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction">
+        <dct:abstract>The purpose of this ontology is to document all the needed steps for designing an example ontology from scratch</dct:abstract>
+        <rdfs:comment>This ontology recaps all the information needed for allowing to provide a rating for the flighs taken from specific air companies</rdfs:comment>
+        <rdfs:label>Flight Satisfaction Ontology</rdfs:label>
+        <owl:backwardCompatibleWith></owl:backwardCompatibleWith>
+        <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:priorVersion>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#dct:abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#dct:abstract"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasAircraft -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasAircraft">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FlightAircraft"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft"/>
+        <rdfs:comment xml:lang="en">The company has aircrafts</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAircraft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasBoardingPass -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasBoardingPass">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass"/>
+        <rdfs:comment xml:lang="en">Has the boarding pass number</rdfs:comment>
+        <rdfs:label xml:lang="en">hsBoardingPass</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasCompany -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasCompany">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Company"/>
+        <rdfs:comment xml:lang="en">Has the company name</rdfs:comment>
+        <rdfs:label xml:lang="en">hasCompany</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasCountry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingCountry"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#TravelerCountry"/>
+        <rdfs:comment xml:lang="en">Belongs to the country</rdfs:comment>
+        <rdfs:label xml:lang="en">hasCountry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasDestination -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasDestination">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Destination"/>
+        <rdfs:comment xml:lang="en">Destination of the Flight</rdfs:comment>
+        <rdfs:label xml:lang="en">hasDestination</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasDestinationAirport -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasDestinationAirport">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Destination"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport"/>
+        <rdfs:comment xml:lang="en">Destination Airport</rdfs:comment>
+        <rdfs:label xml:lang="en">hasDestinationAirport</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasFligth -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasFligth">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:comment xml:lang="en">The Traveler has the Flight</rdfs:comment>
+        <rdfs:label xml:lang="en">hasFlight</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasOrigin -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasOrigin">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin"/>
+        <rdfs:comment xml:lang="en">Origin of the Flight</rdfs:comment>
+        <rdfs:label xml:lang="en">hasOrigin</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasOriginAirport -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasOriginAirport">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport"/>
+        <rdfs:comment xml:lang="en">Origin Airport</rdfs:comment>
+        <rdfs:label xml:lang="en">hasOriginAriport</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasResidenceCountry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasResidenceCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#TravelerCountry"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Country"/>
+        <rdfs:comment xml:lang="en">Country of residence of travelers</rdfs:comment>
+        <rdfs:label xml:lang="en">hasResidenceCountry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasSeat -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasSeat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AircraftSeat"/>
+        <rdfs:comment xml:lang="en">has the seat</rdfs:comment>
+        <rdfs:label xml:lang="en">tiene el asiento</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasTraveler -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasTraveler">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:comment xml:lang="en">Traveler associated to the Rating</rdfs:comment>
+        <rdfs:label xml:lang="en">hasTraveler</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasDelay -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasDelay">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Delayed"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>the flight delay</rdfs:comment>
+        <rdfs:label xml:lang="es">Retraso del vuelo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>duration of the flight</rdfs:comment>
+        <rdfs:label xml:lang="es">Duración del vuelo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasManufacturer -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasManufacturer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Manufacturer of the Aicraft</rdfs:comment>
+        <rdfs:label xml:lang="es">Fabricante</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasMaxRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasMaxRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Max rating value in the survey</rdfs:comment>
+        <rdfs:label xml:lang="es">Valor máximo de la encuesta</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasModel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasModel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Model of the aircraft</rdfs:comment>
+        <rdfs:label xml:lang="es">Modelo de aeronave</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasRatingValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasRatingValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Rating Value</rdfs:comment>
+        <rdfs:label xml:lang="es">Puntuación</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Type of traveler</rdfs:comment>
+        <rdfs:label xml:lang="es">Tipo de viajero</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#isDirectFligth -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#isDirectFligth">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>is a direct flight</rdfs:comment>
+        <rdfs:label xml:lang="es">es un vuelo directo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#isVerifiedTraveler -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#isVerifiedTraveler">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>is a verified traveler</rdfs:comment>
+        <rdfs:label xml:lang="es">Viajero verificado</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Manufacturer and aicraft model</rdfs:comment>
+        <rdfs:label xml:lang="en">Aircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AircraftSeat -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AircraftSeat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft"/>
+        <rdfs:comment xml:lang="en">Seats in the plane</rdfs:comment>
+        <rdfs:label xml:lang="en">AircraftSeat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Country"/>
+        <rdfs:comment xml:lang="en">Airport name an details</rdfs:comment>
+        <rdfs:label xml:lang="en">Airport</rdfs:label>
+        <rdfs:sameAs rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/List_of_airports</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Big -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Big">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Luggage"/>
+        <rdfs:comment xml:lang="en">Big suitcase</rdfs:comment>
+        <rdfs:label xml:lang="en">Big</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:comment xml:lang="en">Boarding pass details</rdfs:comment>
+        <rdfs:label xml:lang="en">Boarding_Pass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Company -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Company">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Name of the air company</rdfs:comment>
+        <rdfs:label xml:lang="en">Company</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Confort -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Confort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Confort rating</rdfs:comment>
+        <rdfs:label xml:lang="en">Confort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Connectivity -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Connectivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Connectivity rating</rdfs:comment>
+        <rdfs:label xml:lang="en">Connectivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Country -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Country">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Countries</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Delayed -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Delayed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:comment xml:lang="en">Details about if the flight has been delayed and their reasons</rdfs:comment>
+        <rdfs:label xml:lang="en">Delayed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Destination -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Destination">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasDestinationAirport"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin"/>
+        <rdfs:comment xml:lang="en">Fligth Destination</rdfs:comment>
+        <rdfs:label xml:lang="en">Destination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Entertainment -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Entertainment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">On board entertainment rating</rdfs:comment>
+        <rdfs:label xml:lang="en">Entertainment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Company"/>
+        <rdfs:comment xml:lang="en">Flight number and important information about it</rdfs:comment>
+        <rdfs:label xml:lang="en">Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FlightAircraft -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FlightAircraft">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasAircraft"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:comment xml:lang="en">Aicraft used for this flight</rdfs:comment>
+        <rdfs:label xml:lang="en">FlightAircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FlightDate -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FlightDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:comment xml:lang="en">Date of the flight</rdfs:comment>
+        <rdfs:label xml:lang="en">FligthDate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#GroundService -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#GroundService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Ground services rating</rdfs:comment>
+        <rdfs:label xml:lang="en">GroundService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Hand -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Hand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Luggage"/>
+        <rdfs:comment xml:lang="en">Hand bag</rdfs:comment>
+        <rdfs:label xml:lang="en">Hand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Luggage -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Luggage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:comment xml:lang="en">Amount and dimensions of the luggage</rdfs:comment>
+        <rdfs:label xml:lang="en">Luggage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Medium -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Luggage"/>
+        <rdfs:comment xml:lang="en">Medium suitcase</rdfs:comment>
+        <rdfs:label xml:lang="en">Medium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Onboard_Services -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Onboard_Services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:comment xml:lang="en">Details about included  onboard services</rdfs:comment>
+        <rdfs:label xml:lang="en">Onboard_Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasOriginAirport"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:comment xml:lang="en">Origin airport of the fligth</rdfs:comment>
+        <rdfs:label xml:lang="en">Origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Rating based on multiple parameters</rdfs:comment>
+        <rdfs:label xml:lang="en">Rating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingCountry -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingCountry">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasCountry"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#TravelerCountry"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Country of the travler that performs the review</rdfs:comment>
+        <rdfs:label xml:lang="en">RatingCountry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingDate -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingDate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Date of the review</rdfs:comment>
+        <rdfs:label xml:lang="en">RatingDate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Recommended -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Recommended">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Is a recommended flight</rdfs:comment>
+        <rdfs:label xml:lang="en">Recommended</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Review -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Review">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Review made for each customer attending the satisfaction survey</rdfs:comment>
+        <rdfs:label xml:lang="en">Flight Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasSeat"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AircraftSeat"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:comment xml:lang="en">Seat number and position details in the aircraft</rdfs:comment>
+        <rdfs:label xml:lang="en">Seat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Small -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Small">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Luggage"/>
+        <rdfs:comment xml:lang="en">Small Suitcase</rdfs:comment>
+        <rdfs:label xml:lang="en">Small</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#StaffService -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#StaffService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Rating of the service staff</rdfs:comment>
+        <rdfs:label xml:lang="en">StaffService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Title -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Title">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Title of the review made by the customers</rdfs:comment>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <rdfs:comment xml:lang="en">Traveler details for each flight</rdfs:comment>
+        <rdfs:label xml:lang="en">Traveler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#TravelerCountry -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#TravelerCountry">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#hasResidenceCountry"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Country"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <rdfs:comment xml:lang="en">Resicence country of the traveler</rdfs:comment>
+        <rdfs:label xml:lang="en">TravelerCountry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#ValueforMoney -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#ValueforMoney">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">Value for the money rating</rdfs:comment>
+        <rdfs:label xml:lang="en">ValueforMoney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Food&amp;Beberages -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Food&amp;Beberages">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <rdfs:comment xml:lang="en">On board food and beberages rating</rdfs:comment>
+        <rdfs:label xml:lang="en">Food&amp;Beberages</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AirCraftSeat_1A -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AirCraftSeat_1A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AircraftSeat"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat_1A"/>
+        <hasAircraft rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airbus_360"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat_1A -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat_1A"/>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AirCraftSeat_1C -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AirCraftSeat_1C">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AircraftSeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airbus_360 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airbus_360">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft"/>
+        <hasManufacturer>Airbus</hasManufacturer>
+        <hasModel>360</hasModel>
+        <rdfs:comment>Aircraft instance 1</rdfs:comment>
+        <rdfs:label xml:lang="en">Aircraft 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airbus_361 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airbus_361">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft"/>
+        <hasManufacturer>Airbus</hasManufacturer>
+        <hasModel>361</hasModel>
+        <rdfs:comment xml:lang="en">Aircraft instance 2</rdfs:comment>
+        <rdfs:label xml:lang="en">Aircraft 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airbus_A300 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airbus_A300">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Aircraft"/>
+        <rdfs:sameAs rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Airbus_A300</rdfs:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport"/>
+        <rdfs:comment xml:lang="en">Airport 1</rdfs:comment>
+        <rdfs:label xml:lang="en">Airport 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport"/>
+        <rdfs:comment xml:lang="en">Airport 2</rdfs:comment>
+        <rdfs:label xml:lang="en">Airport 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#BoardingPass_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#BoardingPass_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass_Seat_1A -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass_Seat_1A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat_1A"/>
+        <hasSeat rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AirCraftSeat_1A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat_1A -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat_1A"/>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass_Seat_1B -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass_Seat_1B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Company_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Company_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Connectivity_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Connectivity_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Connectivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Country1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Country1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Country"/>
+        <rdfs:comment xml:lang="en">Country</rdfs:comment>
+        <rdfs:label>Country 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Delayed_Details_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Delayed_Details_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Delayed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Destination_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Destination_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Destination"/>
+        <hasDestinationAirport rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#DouglasCompany -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#DouglasCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Company"/>
+        <rdfs:sameAs rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Douglas_Aircraft_Company</rdfs:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Entertainment_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Entertainment_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Entertainment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FlightDate_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FlightDate_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FlightDate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight_333 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight_333">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <hasDelay rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</hasDelay>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">120</hasDuration>
+        <rdfs:comment xml:lang="en">Fligth instance 1</rdfs:comment>
+        <rdfs:label xml:lang="en">Fligth 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FligthAircraft_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FligthAircraft_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#FlightAircraft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Fligth_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Fligth_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Flight"/>
+        <hasDelay rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasDelay>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</hasDuration>
+        <rdfs:comment xml:lang="en">Fligth instance 2</rdfs:comment>
+        <rdfs:label xml:lang="en">Flight 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Hand_luggage_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Hand_luggage_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Hand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Luggage_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Luggage_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Luggage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Onboard_services_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Onboard_services_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Onboard_Services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin"/>
+        <hasOrigin rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport_2"/>
+        <rdfs:comment xml:lang="en">Origin</rdfs:comment>
+        <rdfs:label xml:lang="en">Origin 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Origin"/>
+        <hasOriginAirport rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingConfort_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingConfort_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Confort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingCountry_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingCountry_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#RatingCountry"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#User_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#User_1 -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#User_1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Review_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Review_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Rating"/>
+        <hasTraveler rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#User_1"/>
+        <hasMaxRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasMaxRating>
+        <hasRatingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasRatingValue>
+        <rdfs:comment xml:lang="en">Rating</rdfs:comment>
+        <rdfs:label xml:lang="en">Rating 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat_1A -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Seat_1A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#AircraftSeat"/>
+        <rdfs:label xml:lang="en">AirCraftSeat_1B</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#TravelerCountry_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#TravelerCountry_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#TravelerCountry"/>
+        <hasResidenceCountry rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Country1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#User_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#User_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Traveler"/>
+        <hasBoardingPass rdf:resource="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#BoardingPass_1"/>
+        <hasType>Economic</hasType>
+        <isDirectFligth rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isDirectFligth>
+        <isVerifiedTraveler rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVerifiedTraveler>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Airport_2"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass_Seat_1A"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/m826235/ontologies/2024/3/FligthsSatisfaction#Boarding_Pass_Seat_1B"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
